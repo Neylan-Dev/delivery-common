@@ -77,6 +77,10 @@
                     <outputFormats>
                         <format>HTML2</format>
                     </outputFormats>
+                    <excludedClasses>
+                        <param>com.neylandev.delivery.domain.validator.*</param>
+                        <param>com.neylandev.delivery.infrastructure.*</param>
+                    </excludedClasses>
                     <timestampedReports>false</timestampedReports>
                 </configuration>
             </plugin>
