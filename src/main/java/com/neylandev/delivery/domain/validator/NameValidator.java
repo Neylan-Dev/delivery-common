@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class NameValidator implements ConstraintValidator<Name, String> {
 
 
-    private final Pattern patternNoAllowSpecialCharactersAndNumbers = Pattern.compile("^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ]+$");
+    private final Pattern patternNoAllowSpecialCharactersAndNumbers = Pattern.compile("^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ ]+$");
     private final Pattern patternNoAllowMoreThanThreeEqualsCharactersInSequence = Pattern.compile("^((.)(?!\\2{3}))+$");
 
     @Override
