@@ -26,5 +26,5 @@
 
 <h2 id="modulo">🧰 Módulos </h1>
 
-- [Delivery-Common]()
+- Delivery-Common
 - [Delivery-Api](https://github.com/Neylan-Dev/delivery-api)
