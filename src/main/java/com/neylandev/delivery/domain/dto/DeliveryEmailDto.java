@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 public class DeliveryEmailDto {
 
-    private String clientName;
     private String clientEmail;
     private String subject;
     private String body;
