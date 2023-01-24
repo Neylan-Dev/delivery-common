@@ -7,20 +7,19 @@ import javax.persistence.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
 @Setter
-@Entity(name = "clients")
+@Entity(name = "emails")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Client {
+public class Email {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
-    private String name;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "emailId", referencedColumnName = "id")
-    private Email email;
-    private String telephone;
+    @OneToOne(mappedBy = "email")
+    private Client client;
+    private String subject;
+    private String body;
 
 }
