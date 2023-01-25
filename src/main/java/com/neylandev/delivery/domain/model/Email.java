@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -23,5 +24,6 @@ public class Email {
     private String clientEmail;
     private String subject;
     private String body;
+    private LocalDateTime sendDateEmail;
 
 }
