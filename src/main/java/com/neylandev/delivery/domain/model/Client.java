@@ -2,7 +2,10 @@ package com.neylandev.delivery.domain.model;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -18,9 +21,7 @@ public class Client {
     @EqualsAndHashCode.Include
     private Long id;
     private String name;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "emailId", referencedColumnName = "id")
-    private Email email;
+    private String email;
     private String telephone;
 
 }
