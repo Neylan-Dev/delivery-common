@@ -14,6 +14,5 @@ public class DeliveryEmailDto {
     private String clientEmail;
     private String subject;
     private String body;
-    private LocalDateTime sendDateEmail;
 
 }

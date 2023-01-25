@@ -1,11 +1,9 @@
 package com.neylandev.delivery.domain.model;
 
+import com.neylandev.delivery.domain.enums.StatusEmail;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -24,6 +22,8 @@ public class Email {
     private String clientEmail;
     private String subject;
     private String body;
+    @Enumerated(EnumType.STRING)
+    private StatusEmail statusEmail;
     private LocalDateTime sendDateEmail;
 
 }
