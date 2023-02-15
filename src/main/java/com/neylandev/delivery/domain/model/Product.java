@@ -32,9 +32,6 @@ public class Product {
     @NotBlank
     private String description;
 
-    @NotNull
-    private int quantity;
-
     @NotBlank
     private Category category;
 }
