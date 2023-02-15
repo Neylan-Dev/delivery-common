@@ -28,11 +28,6 @@ public class OrderItem {
     private int quantity;
 
     @NotNull
-    private BigDecimal price;
-
-    @NotNull
     private BigDecimal subtotal;
-
-    // constructors, getters, and setters
 }
 
