@@ -19,7 +19,7 @@ public class Occurrence {
     @EqualsAndHashCode.Include
     private Long id;
     @ManyToOne
-    private Delivery delivery;
+    private Order order;
     private String description;
     private OffsetDateTime registerDate;
 }

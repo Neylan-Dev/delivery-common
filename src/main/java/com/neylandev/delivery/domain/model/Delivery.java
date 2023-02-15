@@ -1,7 +1,6 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.DataForBusinessException;
-import com.neylandev.delivery.domain.enums.DeliveryStatus;
 import lombok.*;
 
 import javax.persistence.*;
@@ -47,7 +46,7 @@ public class Delivery {
 
     public void complete(){
         if (!canBeCompletedOrCanceled()){
-            throw DataForBusinessException.DELIVERY_CANNOT_BE_COMPLETED.asBusinessExceptionWithDescriptionFormatted(Long.toString(getId()));
+            throw DataForBusinessException.ORDER_CANNOT_BE_COMPLETED.asBusinessExceptionWithDescriptionFormatted(Long.toString(getId()));
         }
 
         setDeliveryStatus(DeliveryStatus.FINALIZED);
@@ -56,7 +55,7 @@ public class Delivery {
 
     public void cancel(){
         if (!canBeCompletedOrCanceled()){
-            throw DataForBusinessException.DELIVERY_CANNOT_BE_CANCELED.asBusinessExceptionWithDescriptionFormatted(Long.toString(getId()));
+            throw DataForBusinessException.ORDER_CANNOT_BE_CANCELED.asBusinessExceptionWithDescriptionFormatted(Long.toString(getId()));
         }
 
         setDeliveryStatus(DeliveryStatus.CANCELLED);

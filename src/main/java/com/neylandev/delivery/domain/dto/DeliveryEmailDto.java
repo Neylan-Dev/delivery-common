@@ -2,8 +2,6 @@ package com.neylandev.delivery.domain.dto;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Builder
 @Getter
 @Setter
