@@ -33,9 +33,6 @@ public class Order {
     private BigDecimal subtotal;
 
     @NotNull
-    private BigDecimal tax;
-
-    @NotNull
     private BigDecimal shipping;
 
     @NotNull
