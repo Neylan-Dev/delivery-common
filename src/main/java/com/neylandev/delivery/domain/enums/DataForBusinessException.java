@@ -13,6 +13,14 @@ public enum DataForBusinessException {
     ILLEGAL_ARGUMENT_EXCEPTION("Argumento informado não é válido.", null, HttpStatus.BAD_REQUEST),
     CLIENT_NOT_FOUND("Cliente não encontrado", FieldNames.CLIENT_ID, HttpStatus.NOT_FOUND),
     ORDER_NOT_FOUND("Pedido não encontrado", FieldNames.ORDER_ID, HttpStatus.NOT_FOUND),
+    PRODUCT_NOT_FOUND("Produto não encontrado", FieldNames.PRODUCT_ID, HttpStatus.NOT_FOUND),
+    PRODUCT_NAME_IS_NULL("O nome do produto não pode ser nulo", null, HttpStatus.NOT_FOUND),
+    PRODUCT_PRICE_IS_NULL("O preço do produto não pode ser nulo", null, HttpStatus.NOT_FOUND),
+    PRODUCT_CATEGORY_IS_NULL("A categoria do produto não pode ser nula", null, HttpStatus.NOT_FOUND),
+    PRODUCT_DESCRIPTION_IS_NULL("A descrição do produto não pode ser nula", null, HttpStatus.NOT_FOUND),
+    PRODUCT_EXISTS("Esse produto já foi cadastrado", FieldNames.PRODUCT_ID, HttpStatus.BAD_REQUEST),
+    PRODUCT_NOT_FOUND_IN_STOCK("Produto não encontrado no estoque", FieldNames.PRODUCT_NAME, HttpStatus.NOT_FOUND),
+    QUANTITY_PRODUCT_GREATER_THAN_QUANTITY_STOCK("A quantidade do produto é maior do que a presente em estoque", FieldNames.PRODUCT_ID, HttpStatus.BAD_REQUEST),
     ORDER_CANNOT_BE_COMPLETED("Pedido não pode ser finalizado", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
     ORDER_CANNOT_BE_CANCELED("Pedido não pode ser cancelado", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
     CLIENT_ORDER_NOT_FOUND("Cliente do pedido não encontrado", FieldNames.CLIENT_ID, HttpStatus.BAD_REQUEST),
@@ -42,6 +50,8 @@ public enum DataForBusinessException {
 
     private static class FieldNames {
         public static final String CLIENT_ID = "clientId=%s";
+        public static final String PRODUCT_ID = "productId=%s";
+        public static final String PRODUCT_NAME = "productName=%s";
         private static final String ORDER_ID = "orderId=%s";
         private static final String EMAIL = "email=%s";
         private static final String TELEPHONE = "telephone=%s";
