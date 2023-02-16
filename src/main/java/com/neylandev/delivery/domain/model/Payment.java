@@ -18,9 +18,11 @@ import java.math.BigDecimal;
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
     private Order order;
 
     @NotNull
@@ -41,6 +43,7 @@ public class Payment {
     @NotBlank
     private String cvv;
 
+    @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 }
 

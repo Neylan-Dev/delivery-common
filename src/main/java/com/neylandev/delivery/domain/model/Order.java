@@ -51,5 +51,6 @@ public class Order {
     @Embedded
     private Recipient recipient;
 
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 }

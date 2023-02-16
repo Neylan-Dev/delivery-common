@@ -4,33 +4,32 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
+import java.util.List;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
 @Setter
-@Entity(name = "order_items")
+@Entity(name = "stocks")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderItem {
+public class Stock {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
+    @EqualsAndHashCode.Include
     private Product product;
 
     @NotNull
     private int quantity;
 
-    @NotNull
-    private BigDecimal subtotal;
+    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL)
+    private List<StockMovement> stockMovements;
+
 }
 

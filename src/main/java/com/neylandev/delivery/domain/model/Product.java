@@ -3,10 +3,7 @@ package com.neylandev.delivery.domain.model;
 import com.neylandev.delivery.domain.enums.Category;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -33,6 +30,7 @@ public class Product {
     private String description;
 
     @NotBlank
+    @Enumerated(EnumType.STRING)
     private Category category;
 }
 

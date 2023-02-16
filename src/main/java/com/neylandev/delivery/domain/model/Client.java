@@ -21,7 +21,9 @@ public class Client {
     @EqualsAndHashCode.Include
     private Long id;
     private String name;
+    @EqualsAndHashCode.Include
     private String email;
+    @EqualsAndHashCode.Include
     private String telephone;
 
 }
