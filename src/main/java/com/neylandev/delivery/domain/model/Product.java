@@ -29,7 +29,7 @@ public class Product {
     @NotBlank
     private String description;
 
-    @NotBlank
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Category category;
 }
