@@ -25,7 +25,8 @@ public enum DataForBusinessException {
     ORDER_CANNOT_BE_CANCELED("Pedido não pode ser cancelado", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
     CLIENT_ORDER_NOT_FOUND("Cliente do pedido não encontrado", FieldNames.CLIENT_ID, HttpStatus.BAD_REQUEST),
     EMAIL_EXISTS("Esse email já foi cadastrado", FieldNames.EMAIL, HttpStatus.BAD_REQUEST),
-    TELEPHONE_EXISTS("Esse telefone já foi cadastrado", FieldNames.TELEPHONE, HttpStatus.BAD_REQUEST);
+    TELEPHONE_EXISTS("Esse telefone já foi cadastrado", FieldNames.TELEPHONE, HttpStatus.BAD_REQUEST),
+    EMAIL_CANNOT_BE_SEND("O email não pode ser enviado nesse momento", FieldNames.TELEPHONE, HttpStatus.BAD_REQUEST);
 
 
     private String message;
