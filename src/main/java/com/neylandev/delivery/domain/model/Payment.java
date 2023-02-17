@@ -54,5 +54,7 @@ public class Payment {
     private String barCode;
 
     private String pixKey;
+
+    private Boolean flagPaid;
 }
 
