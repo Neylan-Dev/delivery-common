@@ -4,7 +4,7 @@ import com.neylandev.delivery.domain.enums.StatusEmail;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -24,6 +24,6 @@ public class Email {
     private String body;
     @Enumerated(EnumType.STRING)
     private StatusEmail statusEmail;
-    private OffsetDateTime sendDateEmail;
+    private LocalDateTime sendDateEmail;
 
 }

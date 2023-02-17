@@ -1,12 +1,15 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.PaymentStatus;
+import com.neylandev.delivery.domain.enums.PaymentType;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -28,22 +31,28 @@ public class Payment {
     @NotNull
     private BigDecimal amount;
 
-    @NotBlank
-    private String paymentType;
+    @NotNull
+    private PaymentType paymentType;
 
-    @NotBlank
     private String cardNumber;
 
-    @NotBlank
     private String cardName;
 
     @NotBlank
-    private String expirationDate;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private LocalDate expirationDate;
 
-    @NotBlank
     private String cvv;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
+
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    private LocalDate paymentDate;
+
+    private String barCode;
+
+    private String pixKey;
 }
 

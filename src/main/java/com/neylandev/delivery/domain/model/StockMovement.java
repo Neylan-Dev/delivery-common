@@ -5,7 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -28,7 +28,7 @@ public class StockMovement {
     private int quantity;
 
     @NotNull
-    private OffsetDateTime date;
+    private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
     private StockMovementType type;

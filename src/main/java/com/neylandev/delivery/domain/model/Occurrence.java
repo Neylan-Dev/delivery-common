@@ -3,7 +3,7 @@ package com.neylandev.delivery.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter
@@ -22,5 +22,5 @@ public class Occurrence {
     @JoinColumn(name = "order_id")
     private Order order;
     private String description;
-    private OffsetDateTime registerDate;
+    private LocalDateTime registerDate;
 }

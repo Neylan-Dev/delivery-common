@@ -7,7 +7,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DeliveryEmailDto {
+public class OrderEmailDto {
 
     private String clientEmail;
     private String subject;

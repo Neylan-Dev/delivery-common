@@ -6,7 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,8 +39,8 @@ public class Order {
     private BigDecimal total;
 
     @NotNull
-    private OffsetDateTime orderedDate;
-    private OffsetDateTime endDate;
+    private LocalDateTime orderedDate;
+    private LocalDateTime endDate;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<Occurrence> occurrences = new ArrayList<>();
