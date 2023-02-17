@@ -55,6 +55,7 @@ public class Payment {
 
     private String pixKey;
 
-    private Boolean flagPaid;
+    @Column(nullable = false, columnDefinition = "tinyint(1) default 0")
+    private Boolean flagPaid = false;
 }
 
