@@ -34,5 +34,8 @@ public class Product {
     @Enumerated(EnumType.STRING)
     @EqualsAndHashCode.Include
     private Category category;
+
+    @NotBlank
+    private String imageUrl;
 }
 
