@@ -50,10 +50,10 @@ public class ControlExceptionHandler {
         if (split[3].contains("email")) {
             businessException = DataForBusinessException.EMAIL_EXISTS
                     .asBusinessExceptionWithDescriptionFormatted(value);
-        }else if (split[3].contains("telephone")){
+        } else if (split[3].contains("telephone")) {
             businessException = DataForBusinessException.TELEPHONE_EXISTS
                     .asBusinessExceptionWithDescriptionFormatted(value);
-        }else {
+        } else {
             businessException = DataForBusinessException.ILLEGAL_ARGUMENT_EXCEPTION.asBusinessException();
         }
 

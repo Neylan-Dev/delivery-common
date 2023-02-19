@@ -14,25 +14,23 @@ import javax.persistence.Enumerated;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Recipient {
+public class Address {
 
-    @Column(name = "recipient_name")
-    private String name;
-    @Column(name = "recipient_street")
+    @Column(name = "address_street")
     private String street;
-    @Column(name = "recipient_number")
+    @Column(name = "address_number")
     private String number;
-    @Column(name = "recipient_complement")
+    @Column(name = "address_complement")
     private String complement;
-    @Column(name = "recipient_neighborhood")
+    @Column(name = "address_neighborhood")
     private String neighborhood;
-    @Column(name = "recipient_zip_code")
+    @Column(name = "address_zip_code")
     private String zipCode;
-    @Column(name = "recipient_city")
+    @Column(name = "address_city")
     private String city;
-    @Column(name = "recipient_state")
+    @Column(name = "address_state")
     @Enumerated(EnumType.STRING)
     private BrazilianState state;
-    @Column(name = "recipient_country")
+    @Column(name = "address_country")
     private String country;
 }

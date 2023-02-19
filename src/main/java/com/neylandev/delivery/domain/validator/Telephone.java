@@ -12,7 +12,9 @@ import java.lang.annotation.*;
 public @interface Telephone {
 
     String message() default "O telefone='${validatedValue}' é inválido";
-    Class[] groups() default { };
-    Class<? extends Payload>[] payload() default { };
+
+    Class[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 
 }

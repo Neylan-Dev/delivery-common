@@ -21,17 +21,18 @@ import java.time.LocalDate;
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
+    @EqualsAndHashCode.Include
     private Order order;
 
     @NotNull
     private BigDecimal amount;
 
     @NotNull
+    @EqualsAndHashCode.Include
     private PaymentType paymentType;
 
     private String cardNumber;

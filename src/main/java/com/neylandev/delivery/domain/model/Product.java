@@ -21,6 +21,7 @@ public class Product {
     private Long id;
 
     @NotBlank
+    @EqualsAndHashCode.Include
     private String name;
 
     @NotNull
@@ -31,6 +32,7 @@ public class Product {
 
     @NotNull
     @Enumerated(EnumType.STRING)
+    @EqualsAndHashCode.Include
     private Category category;
 }
 

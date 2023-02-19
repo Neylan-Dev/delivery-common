@@ -12,7 +12,9 @@ import java.lang.annotation.*;
 public @interface Name {
 
     String message() default "O nome='${validatedValue}' não pode conter caracteres especiais ou números, ou conter 4 caracteres iguais em sequencia";
-    Class[] groups() default { };
-    Class<? extends Payload>[] payload() default { };
+
+    Class[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 
 }
