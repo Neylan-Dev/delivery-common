@@ -22,6 +22,8 @@ public enum DataForBusinessException {
     PAYMENT_CANNOT_BE_SAVED("O pagamento não pode ser salvo porque o tipo não corresponde aos dados informados", null, HttpStatus.BAD_REQUEST),
     PRODUCT_NAME_IS_NULL("O nome do produto não pode ser nulo", null, HttpStatus.BAD_REQUEST),
     PRODUCT_PRICE_IS_NULL("O preço do produto não pode ser nulo", null, HttpStatus.BAD_REQUEST),
+    PRODUCT_CATEGORY_IS_NULL("A categoria do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
+    PRODUCT_DESCRIPTION_IS_NULL("A descrição do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
     PRODUCT_IMAGE_URL_IS_NULL("A url do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
     PRODUCT_EXISTS("Esse produto já foi cadastrado", FieldNames.PRODUCT_ID, HttpStatus.BAD_REQUEST),
     PRODUCT_NOT_FOUND_IN_STOCK("Produto não encontrado no estoque", FieldNames.PRODUCT_NAME, HttpStatus.NOT_FOUND),
