@@ -14,6 +14,7 @@ public enum DataForBusinessException {
     MUST_FILL_AT_LEAST_ONE_FIELD("É necessário preencher pelo menos um campo", null, HttpStatus.BAD_REQUEST),
     CLIENT_NOT_FOUND("Cliente não encontrado", FieldNames.CLIENT_ID, HttpStatus.NOT_FOUND),
     ORDER_NOT_FOUND("Pedido não encontrado", FieldNames.ORDER_ID, HttpStatus.NOT_FOUND),
+    PRODUCT_NOT_FOUND("Produto não encontrado", FieldNames.PRODUCT_ID, HttpStatus.NOT_FOUND),
     ORDER_CANNOT_BE_DISPATCHED("Pedido não pode ser despachado", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
     ORDER_CANNOT_BE_DELIVERED("Pedido não pode ser entregue", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
     PAYMENT_NOT_FOUND("Pagamento não encontrado", FieldNames.PAYMENT_ID, HttpStatus.NOT_FOUND),
