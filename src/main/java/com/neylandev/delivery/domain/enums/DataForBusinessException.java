@@ -25,7 +25,7 @@ public enum DataForBusinessException {
     PRODUCT_CATEGORY_IS_NULL("A categoria do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
     PRODUCT_DESCRIPTION_IS_NULL("A descrição do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
     PRODUCT_IMAGE_URL_IS_NULL("A url do produto não pode ser nula", null, HttpStatus.BAD_REQUEST),
-    PRODUCT_EXISTS("Esse produto já foi cadastrado", FieldNames.PRODUCT_ID, HttpStatus.BAD_REQUEST),
+    PRODUCT_EXISTS("Esse produto já foi cadastrado", FieldNames.PRODUCT_NAME, HttpStatus.BAD_REQUEST),
     PRODUCT_NOT_FOUND_IN_STOCK("Produto não encontrado no estoque", FieldNames.PRODUCT_NAME, HttpStatus.NOT_FOUND),
     QUANTITY_PRODUCT_GREATER_THAN_QUANTITY_STOCK("A quantidade do produto é maior do que a presente em estoque", FieldNames.PRODUCT_ID, HttpStatus.BAD_REQUEST),
     ORDER_CANNOT_BE_PAID("Pedido não pode ser pago", FieldNames.ORDER_ID, HttpStatus.BAD_REQUEST),
