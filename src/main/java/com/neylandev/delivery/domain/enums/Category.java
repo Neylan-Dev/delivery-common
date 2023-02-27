@@ -23,6 +23,8 @@ public enum Category {
 
     private final String portugueseName;
 
-    private final List<String> portugueseCategories = Stream.of(Category.values()).map(Category::getPortugueseName).collect(Collectors.toList());
+    public static List<String> getPortugueseCategories() {
+        return Stream.of(Category.values()).map(Category::getPortugueseName).collect(Collectors.toList());
+    }
 }
 
