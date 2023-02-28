@@ -1,5 +1,6 @@
 package com.neylandev.delivery.domain.model;
 
+import com.neylandev.delivery.domain.enums.Role;
 import lombok.*;
 
 import javax.persistence.*;
@@ -25,5 +26,8 @@ public class Client {
     private Address address;
     @Embedded
     private Account account;
+    private String password;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 }
