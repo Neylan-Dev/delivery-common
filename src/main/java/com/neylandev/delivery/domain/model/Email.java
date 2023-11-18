@@ -1,9 +1,9 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.StatusEmail;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter

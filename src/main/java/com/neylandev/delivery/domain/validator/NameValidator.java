@@ -1,7 +1,8 @@
 package com.neylandev.delivery.domain.validator;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

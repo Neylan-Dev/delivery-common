@@ -1,9 +1,9 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.Role;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Getter

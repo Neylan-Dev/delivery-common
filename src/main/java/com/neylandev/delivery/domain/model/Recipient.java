@@ -1,12 +1,11 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.BrazilianState;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.*;
-
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 
 @Getter
 @Setter

@@ -1,10 +1,10 @@
 package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.StockMovementType;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)

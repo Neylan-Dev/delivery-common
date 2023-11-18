@@ -2,12 +2,12 @@ package com.neylandev.delivery.domain.model;
 
 import com.neylandev.delivery.domain.enums.PaymentStatus;
 import com.neylandev.delivery.domain.enums.PaymentType;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
