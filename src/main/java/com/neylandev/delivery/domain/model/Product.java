@@ -37,5 +37,8 @@ public class Product {
 
     @NotBlank
     private String imageUrl;
+
+    @NotBlank
+    private byte[] imageData;
 }
 
